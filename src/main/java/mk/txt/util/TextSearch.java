@@ -9,6 +9,9 @@ public class TextSearch {
 		boolean found = true;
 		for (Pattern pattern : patterns) {
 			found &= pattern.matcher(searchHere).find();
+			if (found) {
+				return true;
+			}
 		}
 		return found;
 	}
